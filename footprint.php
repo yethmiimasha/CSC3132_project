@@ -271,6 +271,11 @@
   <div class="header-icons">
     <div class="search-bar">
       <input type="text" placeholder="Search for shoes">
+      <button><i class="fas fa-search"></i></button>
+    </div>
+    <div class="ml-3">
+      <a href="login.php" class="btn btn-outline-primary mr-2">Login</a>
+      <a href="register.php" class="btn btn-primary">Register</a>
       
     </div>
   </div>

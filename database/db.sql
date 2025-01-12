@@ -16,7 +16,7 @@ CREATE TABLE Users (
     address TEXT,
     date_joined TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
-
+vbnul
 -- Create Categories Table (for storing product categories like Men, Women, Kids)
 CREATE TABLE Categories (
     category_id INT AUTO_INCREMENT PRIMARY KEY,
