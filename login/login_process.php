@@ -1,6 +1,6 @@
 <?php
 session_start();
-$conn = new mysqli('localhost', 'root', 'mariadb', 'footprint');
+$conn = new mysqli('127.0.0.1', 'root', 'mariadb', 'footprint');
 
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
