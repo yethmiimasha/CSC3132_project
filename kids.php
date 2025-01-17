@@ -1,89 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kid's Collection</title>
-  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-  <style>
-    body {
-      font-family: 'Arial', sans-serif;
-    }
-    .card {
-      border: none;
-      transition: transform 0.3s ease;
-    }
-    .card:hover {
-      transform: scale(1.05);
-    }
-    .card img {
-      max-height: 250px;
-      object-fit: cover;
-    }
-    .btn-add-to-cart {
-      background-color: #F39C12;
-      color: #FFF;
-    }
-    .btn-add-to-cart:hover {
-      background-color: #D35400;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Children's Collection - FOOTPRINT</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="bg-dark text-white text-center py-3">
-    <h1>Kid's Collection</h1>
-    <p>Fun and comfortable footwear for your little ones!</p>
-  </header>
-  
-  <div class="container mt-4">
-    <div class="row">
-      <!-- Shoe Card 1 -->
-      <div class="col-md-4">
-        <div class="card">
-          <img src="https://example.com/kshoe1.jpg" class="card-img-top" alt="Shoe 1">
-          <div class="card-body text-center">
-            <h5 class="card-title">Colorful Sneakers</h5>
-            
-            <button class="btn btn-add-to-cart" onclick="addToCart()">Add to Cart</button>
-          </div>
+    <header>
+        <div class="logo">
+            <a href="index.php">
+                <img src="images/logo.jpg" alt="Footprint Logo">
+            </a>
         </div>
-      </div>
-      <!-- Shoe Card 2 -->
-      <div class="col-md-4">
-        <div class="card">
-          <img src="https://example.com/kshoe2.jpg" class="card-img-top" alt="Shoe 2">
-          <div class="card-body text-center">
-            <h5 class="card-title">Playful Sandals</h5>
-            
-            <button class="btn btn-add-to-cart" onclick="addToCart()">Add to Cart</button>
-          </div>
+        <div class="logo">
+            <a href="index.php">FOOTPRINT</a>
         </div>
-      </div>
-      <!-- Shoe Card 3 -->
-      <div class="col-md-4">
-        <div class="card">
-          <img src="https://example.com/kshoe3.jpg" class="card-img-top" alt="Shoe 3">
-          <div class="card-body text-center">
-            <h5 class="card-title">Adventure Boots</h5>
-            
-            <button class="btn btn-add-to-cart" onclick="addToCart()">Add to Cart</button>
-          </div>
+        <div class="search-container">
+            <input type="text" placeholder="Search for shoes">
         </div>
-      </div>
-    </div>
-  </div>
-  
-  <footer class="bg-dark text-white text-center py-3 mt-4">
-    <p>&copy; 2024 Kid's Collection. All rights reserved.</p>
-  </footer>
-  
-  <script>
-    let cartCount = 0;
-    function addToCart() {
-      cartCount++;
-      alert('Item added to cart! Total items: ' + cartCount);
-    }
-  </script>
+        <div class="auth-buttons">
+            <a href="login/login.php" class="btn-login">Login</a>
+            <a href="login/register.php" class="btn-register">Register</a>
+        </div>
+    </header>
+
+    <nav class="main-nav">
+        <ul>
+            <li><a href="index.php">Home</a></li>
+            <li><a href="mens.php">Men</a></li>
+            <li><a href="womens.php">Women</a></li>
+            <li><a href="kids.php">Kids</a></li>
+            <li><a href="#">Brands</a></li>
+            <li><a href="#">Offers</a></li>
+            <li><a href="#">Size Chart</a></li>
+            <li><a href="#" class="cart">Cart (<span id="cartCount">0</span>)</a></li>
+        </ul>
+    </nav>
+
+    <section class="featured">
+        <h2>KIDS</h2>
+        <div class="featured-grid" >
+            <div class="product-card" data-product-id="10">
+                <img src="images/kids/emo1.jpg" alt="Classic Sneakers">
+                <h3>Canvas Sneakers</h3>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product-card" data-product-id="11">
+                <img src="images/kids/emo2.jpg" alt="Running Shoes">
+                <h3>Flower Canvas Sneakers</h3>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product-card" data-product-id="12">
+                <img src="images/kids/emo3.jpg" alt="Formal Shoes">
+                <h3>NonSlip Sneakers</h3>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product-card" data-product-id="13">
+                <img src="images/kids/emo4.jpg" alt="Classic Sneakers">
+                <h3>Summer Boys Sandals</h3>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product-card" data-product-id="14">
+                <img src="images/kids/emo5.jpg" alt="Running Shoes">
+                <h3>Spring Leather Sneakers</h3>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product-card" data-product-id="15">
+                <img src="images/kids/emo6.jpg" alt="Formal Shoes">
+                <h3>White Sandals</h3>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product-card" data-product-id="16">
+                <img src="images/kids/emo7.jpg" alt="Classic Sneakers">
+                <h3>Arch Support Sandals</h3>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product-card" data-product-id="17">
+                <img src="images/kids/emo8.jpg" alt="Running Shoes">
+                <h3>Sports Shoes</h3>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product-card" data-product-id="18">
+                <img src="images/kids/emo9.jpg" alt="Formal Shoes">
+                <h3>Girl School Shoes</h3>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product-card" data-product-id="19">
+                <img src="images/kids/emo10.jpg" alt="Formal Shoes">
+                <h3>Boys School Shoes</h3>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product-card" data-product-id="20">
+                <img src="images/kids/emo11.jpg" alt="Formal Shoes">
+                <h3>Pink Sandals</h3>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product-card" data-product-id="21">
+                <img src="images/kids/emo12.jpg" alt="Formal Shoes">
+                <h3>Boys Running Shoes</h3>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Footprint. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="#">Privacy Policy</a> |
+            <a href="#">Terms of Service</a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
-            
