@@ -1,0 +1,533 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1;
+    background-color: var(--bg-color); 
+    color: var(--text-color);
+    background: linear-gradient(45deg, #cc00ff, #00ffff,#ff00ff);
+}
+
+/* Header styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.2rem 4rem;
+    background: linear-gradient(45deg, #feb247, #00ffff,#ff00ff);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 90px; /* Adjust the size as needed */
+    height: 90px; /* Ensure height and width are the same */
+    border-radius: 50%; /* Makes the image circular */
+    object-fit: cover; /* Ensure the image covers the element */
+    margin-right: 0rem;
+}
+
+.logo a {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #000080;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+.search-container {
+    flex: 0 1 400px;
+    margin: 0 2rem;
+}
+
+.search-container input {
+    width: 100%;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 25px;
+    background: linear-gradient(to right, #f5c346, #f84af8);
+    color: white;
+    font-size: 1rem;
+}
+
+.search-container input::placeholder {
+    color: white;
+    opacity: 1;
+}
+
+.auth-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.btn-login, .btn-register {
+    padding: 0.6rem 1.2rem;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    transition: background-color 0.3s;
+}
+
+.btn-login {
+    background-color: transparent;
+    color: #5737b6;
+}
+
+.btn-register {
+    background-color: #611df5;
+    color: white;
+}
+
+/* Navigation styles */
+.main-nav {
+    background-color: #960069;
+    padding: 0.5rem 0;
+}
+
+.main-nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+}
+
+.main-nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+/* Hero section */
+.hero {
+    height: 500px;
+    background: linear-gradient(45deg, #000080, #4b0082);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    text-align: left;
+    color: white;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url('') center/cover;
+    opacity: 0.6;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    margin-left: 100px;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.shop-now-btn {
+    background-color: #eee7fd;
+    color: #000080;
+    padding: 0.8rem 2rem;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+}
+
+/* Collections section */
+.collections {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    padding: 2rem;
+}
+
+.collection-card {
+    position: relative;
+    height: 300px;
+    overflow: hidden;
+}
+
+.collection-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.collection-card h2 {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: white;
+    font-size: 2rem;
+}
+
+/* Featured section */
+.featured {
+    padding: 4rem 10rem;
+    text-align: center;
+}
+
+.featured h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #000080;
+}
+
+.featured-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}
+
+.product-card {
+    width: 250px;
+    height: 450px;
+    text-align: center;
+    background-color: white;
+
+}
+
+.product-card img {
+    width: 200px;
+    height: 300px;
+    object-fit: contain;
+    margin-bottom: 2rem; 
+}
+
+.add-to-cart {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 0.5rem 1.5rem;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: background-color 0.3s;
+    margin-bottom: 1rem;
+}
+
+.add-to-cart:hover {
+    background-color: #0056b3;
+}
+
+/* Footer */
+footer {
+    background-color: #1a1a1a;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+.footer-links {
+    margin-top: 0.5rem;
+}
+
+footer a {
+    color: #007bff;
+    text-decoration: none;
+    margin: 0 0.5rem;
+}
+
+/* Responsive design */
+@media (max-width: 1024px) {
+    header {
+        padding: 1.5rem 2rem;
+    }
+
+    .search-container {
+        flex: 0 1 300px;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 1rem;
+        gap: 1rem;
+    }
+
+    .search-container {
+        width: 100%;
+        margin: 1rem 0;
+    }
+
+    .collections {
+        grid-template-columns: 1fr;
+    }
+
+    .featured-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+}
+
+/* [Previous CSS remains the same until the interactive elements] */
+
+/* Interactive elements animations */
+@keyframes buttonPush {
+    0% { transform: scale(1); }
+    50% { transform: scale(0.95); }
+    100% { transform: scale(1); }
+}
+
+@keyframes cardHover {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-10px); }
+}
+
+/* Logo hover effect */
+.logo a {
+    /* Previous styles remain */
+    transition: color 0.3s ease;
+}
+
+.logo a:hover {
+    color: #1a1aff;
+    text-shadow: 0 0 15px rgba(0, 0, 128, 0.2);
+}
+
+/* Search bar interactions */
+.search-container input {
+    /* Previous styles remain */
+    transition: all 0.3s ease;
+}
+
+.search-container input:focus {
+    transform: scale(1.02);
+    box-shadow: 0 0 15px rgba(230, 92, 0, 0.3);
+    outline: none;
+}
+
+/* Button animations */
+.btn-login, .btn-register {
+    /* Previous styles remain */
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-login:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+.btn-register:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3);
+}
+
+.btn-login:active, .btn-register:active {
+    animation: buttonPush 0.2s ease-in-out;
+}
+
+/* Navigation menu interactions */
+.main-nav a {
+    /* Previous styles remain */
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.main-nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    left: 50%;
+    background-color: white;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.main-nav a:hover::after {
+    width: 100%;
+}
+
+.main-nav a:active {
+    transform: scale(0.95);
+}
+
+/* Shop Now button animations */
+.shop-now-btn {
+    /* Previous styles remain */
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.shop-now-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.3);
+}
+
+.shop-now-btn:active {
+    animation: buttonPush 0.2s ease-in-out;
+}
+
+/* Collection card animations */
+.collection-card {
+    /* Previous styles remain */
+    transition: all 0.4s ease;
+    cursor: pointer;
+}
+
+.collection-card:hover {
+    animation: cardHover 0.4s ease forwards;
+}
+
+.collection-card img {
+    /* Previous styles remain */
+    transition: all 0.4s ease;
+}
+
+.collection-card:hover img {
+    transform: scale(1.05);
+}
+
+.collection-card h2 {
+    /* Previous styles remain */
+    transition: all 0.3s ease;
+}
+
+.collection-card:hover h2 {
+    transform: translateY(-5px);
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Product card animations */
+.product-card {
+    /* Previous styles remain */
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.product-card img {
+    /* Previous styles remain */
+    transition: all 0.3s ease;
+}
+
+.product-card:hover img {
+    transform: scale(1.05);
+}
+
+/* Add to cart button animations */
+.add-to-cart {
+    /* Previous styles remain */
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.add-to-cart:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3);
+}
+
+.add-to-cart:active {
+    animation: buttonPush 0.2s ease-in-out;
+}
+
+/* Add ripple effect for Add to Cart button */
+.add-to-cart::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.3s ease, height 0.3s ease;
+}
+
+.add-to-cart:active::after {
+    width: 200px;
+    height: 200px;
+    opacity: 0;
+}
+
+/* Footer link animations */
+footer a {
+    /* Previous styles remain */
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+footer a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1px;
+    bottom: -2px;
+    left: 50%;
+    background-color: #007bff;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+footer a:hover {
+    color: #0056b3;
+}
+
+footer a:hover::after {
+    width: 100%;
+}
+
+/* Cart animation */
+.cart {
+    transition: all 0.3s ease;
+}
+
+.cart:hover {
+    color: #e6e6e6;
+}
+
+/* Adding smooth transition for all elements */
+* {
+    transition: background-color 0.3s ease, 
+                transform 0.3s ease, 
+                box-shadow 0.3s ease;
+}
+
+/* Ensuring animations are disabled for users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation: none !important;
+        transition: none !important;
+    }
+}
